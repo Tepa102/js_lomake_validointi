@@ -1,7 +1,7 @@
 function checkUserIDLength() {
-  var userIDInput = document.getElementById("ID");
-  var userIDError = document.getElementById("IDError");
-  var minLength = 5; // vähimmäispituus
+  const userIDInput = document.getElementById("ID");
+  const userIDError = document.getElementById("IDError");
+  const minLength = 5; // vähimmäispituus
 
   if (userIDInput.value.length < minLength) {
     userIDError.textContent = "Käyttäjä ID:n pituus tulee olla vähintään " + minLength + " merkkiä.";
@@ -11,9 +11,9 @@ function checkUserIDLength() {
 }
 
 function validateNimi() {
-  var nimiInput = document.getElementById("nimi");
-  var nimiError = document.getElementById("nimi-error");
-  var nimiPattern = /^[A-Za-zÄÖÅäöå\s]+$/;
+  const nimiInput = document.getElementById("nimi");
+  const nimiError = document.getElementById("nimi-error");
+  const nimiPattern = /^[A-Za-zÄÖÅäöå\s]+$/;
 
   if (!nimiPattern.test(nimiInput.value)) {
     nimiError.textContent = "Nimi voi sisältää vain kirjaimia ja välilyöntejä.";
@@ -23,9 +23,9 @@ function validateNimi() {
 }
 
 function validatePostinumero() {
-  var postinumeroInput = document.getElementById("postinumero");
-  var postinumeroError = document.getElementById("postinumero-error");
-  var numericPattern = /^\d+$/; // Tarkistaa, että on vain numeroista
+  const postinumeroInput = document.getElementById("postinumero");
+  const postinumeroError = document.getElementById("postinumero-error");
+  const numericPattern = /^\d+$/; // Tarkistaa, että on vain numeroista
 
   if (!numericPattern.test(postinumeroInput.value)) {
     postinumeroError.textContent = "Syötä kelvollinen postinumero.";
@@ -47,8 +47,8 @@ function validateEmail() {
 }
 
 function validateForm() {
-  var genderInputs = document.querySelectorAll('input[name="sukupuoli"]:checked');
-  var genderError = document.getElementById("sukupuoli-error");
+  const genderInputs = document.querySelectorAll('input[name="sukupuoli"]:checked');
+  const genderError = document.getElementById("sukupuoli-error");
 
   if (genderInputs.length !== 1) {
     genderError.textContent = "Valitse tarkalleen yksi sukupuoli.";
