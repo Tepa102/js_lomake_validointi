@@ -25,7 +25,7 @@ function validateNimi() {
 function validatePostinumero() {
   var postinumeroInput = document.getElementById("postinumero");
   var postinumeroError = document.getElementById("postinumero-error");
-  var numericPattern = /^\d+$/; // Tarkistaa, että syöte koostuu vain numeroista
+  var numericPattern = /^\d+$/; // Tarkistaa, että on vain numeroista
 
   if (!numericPattern.test(postinumeroInput.value)) {
     postinumeroError.textContent = "Syötä kelvollinen postinumero.";
@@ -33,7 +33,6 @@ function validatePostinumero() {
     postinumeroError.textContent = "";
   }
 }
-
 
 function validateEmail() {
   const emailInput = document.getElementById('email');
@@ -47,4 +46,16 @@ function validateEmail() {
   }
 }
 
+function validateForm() {
+  var genderInputs = document.querySelectorAll('input[name="sukupuoli"]:checked');
+  var genderError = document.getElementById("sukupuoli-error");
+
+  if (genderInputs.length !== 1) {
+    genderError.textContent = "Valitse tarkalleen yksi sukupuoli.";
+    return false; // Estää  lähettämisen
+  } else {
+    genderError.textContent = "";
+    return true; // Sallii lähettämisen
+  }
+}
 
