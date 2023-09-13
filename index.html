@@ -19,7 +19,10 @@
             <form id="lomake">
                 <div class="label-input">
                     <label for="ID">Käyttäjä ID:  </label>
-                    <input type="text" id="ID" name="ID" size="20" minlength="5">
+                    <input type="text" id="ID" name="ID" size="20" oninput="checkUserIDLength()">
+                    <div id="IDError" style="color: red;">
+                    </div>
+                </div>
                 </div><br>
                 <div class="label-input">
                     <label for="salasana">Salasana:  </label>
@@ -27,7 +30,8 @@
                 </div><br>
                 <div class="label-input">
                     <label for="nimi">Nimi:  </label>
-                    <input type="text" id="nimi" name="nimi" size="40">
+                    <input type="text" id="nimi" name="nimi" size="40" oninput="validateNimi()">
+                    <div id="nimi-error" style="color: red;"></div>
                 </div><br>
                 <div class="label-input">
                     <label for="osoite">Osoite:  </label>
@@ -47,12 +51,15 @@
                 </div><br>
                 <div class="label-input">
                     <label for="postinumero">Postinumero:  </label>
-                    <input type="text" id="postinumero" name="postinumero" size="20" maxlength="5">
+                    <input type="text" id="postinumero" name="postinumero" size="20" maxlength="5" oninput="validatePostinumero()">
+                    <div id="postinumero-error" style="color: red;"></div>
+                    </div>
+                    
                 </div><br>
                 <div class="label-input">
                     <label for="email">Sähköposti:  </label>
                     <input type="text" id="email" name="email" oninput="validateEmail()" autocomplete="off" size="40">
-                <div id="email-error" style="color: red;"></div>
+                    <div id="emailError" style="color: red;"></div>
                 </div>
                 <br>
                 <div class="label-input">
