@@ -36,12 +36,12 @@ function validateForm() {
   }
 
   const nimiPattern = /^[A-Za-zÄÖÅäöå\s]+$/;
-    if (!nimiPattern.test(nimiInput.value)) {
-      nimiError.textContent = "Nimi voi sisältää vain kirjaimia ja välilyöntejä.";
-      return false;
-    } else {
-      nimiError.textContent = "";
-    }
+  if (!nimiPattern.test(nimiInput.value)) {
+    nimiError.textContent = "Nimi voi sisältää vain kirjaimia ja välilyöntejä.";
+    return false;
+  } else {
+    nimiError.textContent = "";
+  }
 
   if (!/^\d{5}$/.test(postinumeroInput.value)) {
     postinumeroError.textContent = "Syötä kelvollinen 5-numeroinen postinumero.";
@@ -51,15 +51,15 @@ function validateForm() {
   }
 
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (emailInput.value.length === 0) {
-      emailError.textContent = 'Syötä sähköpostiosoite.';
-      return false;
-    } else if (!emailPattern.test(emailInput.value)) {
-      emailError.textContent = 'Syötä kelvollinen sähköpostiosoite.';
-      return false;
-    } else {
-      emailError.textContent = '';
-    }
+  if (emailInput.value.length === 0) {
+    emailError.textContent = 'Syötä sähköpostiosoite.';
+    return false;
+  } else if (!emailPattern.test(emailInput.value)) {
+    emailError.textContent = 'Syötä kelvollinen sähköpostiosoite.';
+    return false;
+  } else {
+    emailError.textContent = '';
+  }
 
   genderError.textContent = "";
   
