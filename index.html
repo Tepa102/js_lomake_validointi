@@ -27,6 +27,8 @@
                 <div class="label-input">
                     <label for="salasana">Salasana:  </label>
                     <input type="password" id="salasana" name="salasana" size="20">
+                    <div id="salasana-error" class="error" style="color: red;"> </div>
+
                 </div><br>
                 <div class="label-input">
                     <label for="nimi">Nimi:  </label>
@@ -45,9 +47,10 @@
                         <option value="ruotsi">Ruotsi</option>
                         <option value="norja">Norja</option>
                         <option value="tanska">Tanska</option>
-                        <option value="norja">Islanti</option>
-                        <option value="tanska">Muu</option>
+                        <option value="islanti">Islanti</option>
+                        <option value="muu">Muu</option>
                     </select>
+                    <div id="maa-error" style="color: red;"></div>
                 </div><br>
                 <div class="label-input">
                     <label for="postinumero">Postinumero:  </label>
@@ -70,8 +73,9 @@
                 </div>
                 <div class="label-input">
                     <label for="kieli">Kieli:</label>    <!-- tähän ruudut: Suomi Muu kuin Suomi-->
-                    <input type="checkbox" id="kieli1" name="kieli" value="suomi" checked="checked"> Suomi
+                    <input type="checkbox" id="kieli1" name="kieli" value="suomi"> Suomi
                     <input type="checkbox" id="kieli2" name="kieli" value="muu"> Muu kuin Suomi
+                    <div id="kieli-error" style="color: red;"></div>
                 </div><br>
                 <div class="label-input">
                     <label for="tietoja">Lisätietoja:  </label>
