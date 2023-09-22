@@ -100,7 +100,6 @@ if (errors.length > 0) {
   return false;
 }
 genderError.textContent = "";
-  
   return true
 
 }
