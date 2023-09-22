@@ -36,7 +36,7 @@ function validateForm() {
   const nimiPattern = /^[A-Za-zÄÖÅäöå\s]+$/;
   if (!nimiPattern.test(nimiInput.value)) {
     nimiError.textContent = "Nimi voi sisältää vain kirjaimia ja välilyöntejä.";
-    errors.push("Nimi voi sisältää vain kirjaimia ja välilyönteijä.");
+    errors.push("Nimi voi sisältää vain kirjaimia ja välilyöntejä.");
   } else {
     nimiError.textContent = "";
   }
@@ -99,6 +99,8 @@ if (errors.length > 0) {
   showErrors(errors);
   return false;
 }
+genderError.textContent = "";
+  
+  return true
 
-return true;
 }
